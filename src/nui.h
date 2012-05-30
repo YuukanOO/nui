@@ -3,7 +3,9 @@
 
 #include "config.h"
 
-void nui_init(NUI_INIT_ARGS)
+// Called by nui_init(NUI_INIT_ARGS_V)
+// Which sends the args from NUI_MAIN to this function
+void nui_init(NUI_INIT_ARGS_D)
 {
 
 }
