@@ -14,8 +14,13 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 # Add include directories based on the platform on which we are compiling this project
 if(WIN32)
 	include_directories(${PROJECT_SOURCE_DIR}/src/native/win32)
+	set(NATIVE_DIR native/win32) # Set the native path so we could include the C platform specific files
 elseif(UNIX)
 	include_directories(${PROJECT_SOURCE_DIR}/src/native/gtk3)
+	set(NATIVE_DIR native/gtk3)
+else()
+	# No implementation found
+	message(FATAL_ERROR "No implementation found for this platform!")
 endif(WIN32)
 
 # Add subdirectories

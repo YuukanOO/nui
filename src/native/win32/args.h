@@ -1,5 +1,5 @@
-#ifndef CONFIG_H_
-#define CONFIG_H_
+#ifndef ARGS_H_
+#define ARGS_H_
 
 #include <windows.h>
 
