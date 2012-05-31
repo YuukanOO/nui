@@ -1,9 +1,8 @@
-#ifndef ARGS_H_
-#define ARGS_H_
+#ifndef FUNC_ARGS_H_
+#define FUNC_ARGS_H_
 
 #include <windows.h>
 
-#define NUI_MAIN(ARGS) int WINAPI WinMain(ARGS)
 #define NUI_MAIN_ARGS_D HINSTANCE hInstance, \
 						HINSTANCE hPrevInstance, \
 						LPSTR lpCmdLine, \
