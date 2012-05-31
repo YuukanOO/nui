@@ -1,14 +1,28 @@
+/**
+ *	Defines WIN32 specific arguments list.
+ *	The basic syntax of those macros are as follow:
+ *
+ *		<FUNCTION_NAME>_ARGS_<D | V>
+ *
+ *	where:
+ *		- FUNCTION_NAME is the name of the function
+ *		- the last letter stands for 	D -> Declaration
+ *										V -> Value
+ */
+
 #ifndef FUNC_ARGS_H_
 #define FUNC_ARGS_H_
 
 #include <windows.h>
 
-#define NUI_MAIN_ARGS_D HINSTANCE hInstance, \
-						HINSTANCE hPrevInstance, \
-						LPSTR lpCmdLine, \
-						int nCmdShow
-#define NUI_INIT_ARGS_D HINSTANCE hInstance, \
-						int nCmdShow
-#define NUI_INIT_ARGS_V hInstance, nCmdShow
+/** Program's main arguments declaration */
+#define NUI_MAIN_ARGS_D			HINSTANCE hInstance, \
+								HINSTANCE hPrevInstance, \
+								LPSTR lpCmdLine, \
+								int nCmdShow
+/** Declaration of the nui_init function */
+#define NUI_INIT_ARGS_D			HINSTANCE hInstance, int nCmdShow
+/** Values of the nui_init function. Those values comes from the NUI_MAIN function */
+#define NUI_INIT_ARGS_V			hInstance, nCmdShow
 
 #endif

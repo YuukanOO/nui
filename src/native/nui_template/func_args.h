@@ -14,6 +14,10 @@
 #define FUNC_ARGS_H_
 
 /** Program's main arguments declaration */
-#define NUI_MAIN_ARGS_D // On most platform, this will be: int argc, char* argv[]
+#define NUI_MAIN_ARGS_D			// On most platform, this will be: int argc, char* argv[]
+/** Declaration of the nui_init function */
+#define NUI_INIT_ARGS_D			// Your value
+/** Values of the nui_init function. Those values comes from the NUI_MAIN function */
+#define NUI_INIT_ARGS_V			// Your value
 
 #endif

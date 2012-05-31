@@ -1,5 +1,6 @@
 # Set some flags if needed
 set(EXE_FLAGS)
+
 if(WIN32)
 	set(EXE_FLAGS ${EXE_FLAGS} WIN32)
 endif(WIN32)
