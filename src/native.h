@@ -1,3 +1,7 @@
+/**
+ *	All native function prototypes lives here. Do not disturb.
+ */
+
 #ifndef NATIVE_H_
 #define NATIVE_H_
 

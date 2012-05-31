@@ -8,6 +8,5 @@ NUI_MAIN(NUI_MAIN_ARGS_D)
 	nui_alert("This is a five: %i or maybe not %i", 5, 8);
 
 	// Start the application
-	nui_run();
-	return 0;
+	return nui_run();
 }

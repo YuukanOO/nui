@@ -7,10 +7,11 @@ void nui_init(NUI_INIT_ARGS_D)
 	nui_native_init(NUI_INIT_ARGS_V);
 }
 
-void nui_run()
+int nui_run()
 {
-	// Launch the native main loop which processed events
+	// Launch the native main loop which process events
 	nui_native_main_loop();
+	return 0;
 }
 
 void nui_alert(const char* format, ...)
