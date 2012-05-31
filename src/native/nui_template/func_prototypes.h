@@ -6,6 +6,6 @@
 #define FUNC_PROTOTYPES_H_
 
 /** Entry point of the program */
-#define NUI_MAIN(ARGS) // On most platforms, this will be int main(ARGS)
+#define NUI_MAIN(ARGS)			// On most platforms, this will be int main(ARGS)
 
 #endif
