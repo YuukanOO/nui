@@ -16,8 +16,13 @@ if(WIN32)
 	include_directories(${PROJECT_SOURCE_DIR}/src/native/win32)
 	set(NATIVE_DIR native/win32) # Set the native path so we could include the C platform specific files
 elseif(UNIX)
-	include_directories(${PROJECT_SOURCE_DIR}/src/native/gtk3)
+	include(FindPkgConfig)
+	pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+	include_directories(${PROJECT_SOURCE_DIR}/src/native/gtk3 ${GTK3_INCLUDE_DIRS})
+	link_directories(${GTK3_LIBRARY_DIRS})
+
 	set(NATIVE_DIR native/gtk3)
+	set(GUI_LIBS ${GUI_LIBS} ${GTK3_LIBRARIES})
 else()
 	# No implementation found
 	message(FATAL_ERROR "No implementation found for this platform!")

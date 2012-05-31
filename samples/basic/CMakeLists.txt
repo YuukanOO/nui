@@ -9,4 +9,4 @@ endif(WIN32)
 add_executable(basic ${EXE_FLAGS} main.c)
 
 # Link the sample
-target_link_libraries(basic nui)
+target_link_libraries(basic ${GUI_LIBS} nui)

@@ -4,8 +4,15 @@
 
 void nui_init(NUI_INIT_ARGS_D)
 {
-	printf("nui init... ");
+	nui_native_init(NUI_INIT_ARGS_V);
 }
+
+void nui_run()
+{
+	// Launch the native main loop which processed events
+	nui_native_main_loop();
+}
+
 void nui_alert(const char* format, ...)
 {
 	char buf[256];

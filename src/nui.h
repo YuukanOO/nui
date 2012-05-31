@@ -6,5 +6,6 @@
 #include "func_prototypes.h"
 
 void nui_init(NUI_INIT_ARGS_D);
+void nui_run();
 void nui_alert(const char* format, ...);
 #endif
