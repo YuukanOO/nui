@@ -1,4 +1,5 @@
 #include "nui.h"
+#include "native.h"
 #include <stdio.h>
 #include <stdarg.h>
 
