@@ -1,3 +1,7 @@
+/**
+ *	Very basic sample used to demonstrate how to use this library
+ */
+
 #include <nui.h>
 
 NUI_MAIN(NUI_MAIN_ARGS_D)

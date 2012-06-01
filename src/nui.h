@@ -10,6 +10,12 @@
 #include "func_prototypes.h"
 
 /**
+ *	--------------------------------------------------------
+ *	=>	NUI CORE RELATED FUNCTIONS
+ *	--------------------------------------------------------
+ */
+
+/**
  *	\brief		Init the NUI lib and native OS API
  */
 void nui_init(NUI_INIT_ARGS_D);
@@ -22,4 +28,11 @@ int nui_run();
  *	\param		format	:	string format
  */
 void nui_alert(const char* format, ...);
+
+/**
+ *	--------------------------------------------------------
+ *	=>	WIDGET RELATED METHODS
+ *	--------------------------------------------------------
+ */
+
 #endif

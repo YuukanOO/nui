@@ -13,6 +13,12 @@
 #ifndef FUNC_ARGS_H_
 #define FUNC_ARGS_H_
 
+/**
+ *	--------------------------------------------------------
+ *	=>	ARGUMENTS FOR INITIALIZATION STUFF
+ *	--------------------------------------------------------
+ */
+
 /** Program's main arguments declaration */
 #define NUI_MAIN_ARGS_D			// On most platform, this will be: int argc, char* argv[]
 /** Declaration of the nui_init function */

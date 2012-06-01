@@ -15,6 +15,12 @@
 
 #include <windows.h>
 
+/**
+ *	--------------------------------------------------------
+ *	=>	ARGUMENTS FOR INITIALIZATION STUFF
+ *	--------------------------------------------------------
+ */
+
 /** Program's main arguments declaration */
 #define NUI_MAIN_ARGS_D			HINSTANCE hInstance, \
 								HINSTANCE hPrevInstance, \

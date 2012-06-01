@@ -7,6 +7,12 @@
 
 #include <windows.h>
 
+/**
+ *	--------------------------------------------------------
+ *	=>	PROTOTYPES FOR INITIALIZATION STUFF
+ *	--------------------------------------------------------
+ */
+
 /** Entry point of the program */
 #define NUI_MAIN(ARGS)			int WINAPI WinMain(ARGS)
 

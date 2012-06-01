@@ -7,8 +7,29 @@
 
 #include "func_args.h"
 
+/**
+ *	--------------------------------------------------------
+ *	=>	NATIVE INITIALIZATION RELATED FUNCTIONS
+ *	--------------------------------------------------------
+ */
+
+/**
+ *	\brief		Init the native API
+ */
 void nui_native_init(NUI_INIT_ARGS_D);
+/**
+ *	\brief		Launch the native main loop
+ */
 void nui_native_main_loop();
+/**
+ *	\brief		Show an alert
+ */
 void nui_native_alert(const char* msg);
+
+/**
+ *	--------------------------------------------------------
+ *	=>	NATIVE WIDGET RELATED FUNCTIONS
+ *	--------------------------------------------------------
+ */
 
 #endif

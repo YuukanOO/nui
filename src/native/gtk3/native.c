@@ -1,15 +1,19 @@
+/**
+ *	Native methods implementation. See nui/native.h for explanation of all methods.
+ */
+
 #include <gtk/gtk.h>
 
 void nui_native_init(int argc, char* argv[])
 {
 	gtk_init(&argc, &argv);
 }
-
+// -----------------------------------------------------------------
 void nui_native_main_loop()
 {
 	gtk_main();
 }
-
+// -----------------------------------------------------------------
 void nui_native_alert(const char* msg)
 {
 	// Create the gtk message non modal dialog
