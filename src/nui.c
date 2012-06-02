@@ -12,6 +12,10 @@ int nui_run()
 {
 	// Launch the native main loop which process events
 	nui_native_main_loop();
+
+	// Cleanup some stuff ?? Does the program always reach this point?
+	nui_alert("Reach the end of the program");
+	// TODO: Provides memory management
 	return 0;
 }
 // -----------------------------------------------------------------
