@@ -6,8 +6,16 @@
 #ifndef NUI_H_
 #define NUI_H_
 
+#include "world.h"
 #include "func_args.h"
 #include "func_prototypes.h"
+
+/**
+ *	--------------------------------------------------------
+ *	=>	NUI EXTERNS
+ *	--------------------------------------------------------
+ */
+extern nui_app_t nui_g_app;
 
 /**
  *	--------------------------------------------------------

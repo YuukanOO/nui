@@ -3,6 +3,7 @@
  */
 
 #include <windows.h>
+#include "world.h"
 #include "../../memory.h"
 #include "../../nui.h"
 
@@ -65,6 +66,9 @@ void nui_native_init(HINSTANCE hInstance, int nCmdShow)
 		nui_alert("Can't register the WIN32 class!");
 		// TODO: Should quit the application!
 	}
+
+	// Sets the nui world structure
+	nui_g_app.instance = &hInstance;
 }
 // -----------------------------------------------------------------
 void nui_native_main_loop()
