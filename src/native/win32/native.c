@@ -86,3 +86,8 @@ void nui_native_alert(const char* msg)
 {
 	MessageBox(NULL, msg, "NUI Alert", MB_OK | MB_ICONINFORMATION);
 }
+// -----------------------------------------------------------------
+void nui_native_quit()
+{
+	
+}

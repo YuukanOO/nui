@@ -29,3 +29,8 @@ void nui_native_alert(const char* msg)
 	// And show this widget
 	gtk_widget_show(dialog);
 }
+// -----------------------------------------------------------------
+void nui_native_quit()
+{
+	
+}

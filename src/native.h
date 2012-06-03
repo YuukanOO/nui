@@ -9,7 +9,7 @@
 
 /**
  *	--------------------------------------------------------
- *	=>	NATIVE INITIALIZATION RELATED FUNCTIONS
+ *	=>	NATIVE CORE RELATED FUNCTIONS
  *	--------------------------------------------------------
  */
 
@@ -23,8 +23,13 @@ void nui_native_init(NUI_INIT_ARGS_D);
 void nui_native_main_loop();
 /**
  *	\brief		Show an alert
+ *	\param		msg		:	message to show
  */
 void nui_native_alert(const char* msg);
+/**
+ *	\brief		Quit the application
+ */
+void nui_native_quit();
 
 /**
  *	--------------------------------------------------------
