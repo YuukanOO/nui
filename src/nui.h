@@ -36,6 +36,10 @@ int nui_run();
  *	\param		format	:	string format
  */
 void nui_alert(const char* format, ...);
+/**
+ *	\brief		Quit the main application
+ */
+void nui_quit();
 
 /**
  *	--------------------------------------------------------

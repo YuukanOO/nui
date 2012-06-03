@@ -29,7 +29,7 @@ LRESULT CALLBACK nui_win32_wndproc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 			DestroyWindow(hwnd);
 			break;
 		case WM_DESTROY:
-			PostQuitMessage(0);
+			nui_quit();
 			break;
 		default:
 			return DefWindowProc(hwnd, msg, wParam, lParam);
@@ -89,5 +89,5 @@ void nui_native_alert(const char* msg)
 // -----------------------------------------------------------------
 void nui_native_quit()
 {
-	
+	PostQuitMessage(0);
 }

@@ -29,7 +29,7 @@ int nui_run()
 
 	// Cleanup some stuff ?? Does the program always reach this point?
 	nui_alert("Reach the end of the program");
-	// TODO: Provides memory management
+
 	return 0;
 }
 // -----------------------------------------------------------------
@@ -41,4 +41,9 @@ void nui_alert(const char* format, ...)
 	vsprintf(buf, format, p_args); // Format the string to the buffer
 	nui_native_alert(buf); // Call the native API to display a basic message box or some kind of alert
 	va_end(p_args);
+}
+// -----------------------------------------------------------------
+void nui_quit()
+{
+	nui_native_quit();
 }
