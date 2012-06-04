@@ -32,5 +32,5 @@ void nui_native_alert(const char* msg)
 // -----------------------------------------------------------------
 void nui_native_quit()
 {
-	
+	gtk_main_quit();
 }
