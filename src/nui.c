@@ -5,7 +5,7 @@
 
 /**
  *	--------------------------------------------------------
- *	=>	NUI EXTERNS
+ *	=>	NUI EXTERNS DECLARATION
  *	--------------------------------------------------------
  */
 
@@ -13,7 +13,7 @@ nui_app_t nui_g_app;
 
 /**
  *	--------------------------------------------------------
- *	=>	IMPLEMENTATION
+ *	=>	CORE IMPLEMENTATION
  *	--------------------------------------------------------
  */
 
@@ -46,4 +46,24 @@ void nui_alert(const char* format, ...)
 void nui_quit()
 {
 	nui_native_quit();
+}
+
+/**
+ *	--------------------------------------------------------
+ *	=>	WINDOWS RELATED IMPLEMENTATION
+ *	--------------------------------------------------------
+ */
+
+nui_window_t* nui_create_window(const char* title,
+								unsigned int width,
+								unsigned int height,
+								NUI_WINDOW_STYLE style)
+{
+	// TODO: I should allocates the struct here to avoid having nui_alloc in different places
+	return NULL;
+}
+// -----------------------------------------------------------------
+void nui_destroy_window(nui_window_t* windowPtr)
+{
+	// TODO: And I should free the allocated window here, after the native stuff are done
 }

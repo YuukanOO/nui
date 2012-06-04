@@ -6,6 +6,9 @@
 #ifndef NUI_H_
 #define NUI_H_
 
+#include "constants.h"
+#include "elements.h"
+#include "flags.h"
 #include "world.h"
 #include "func_args.h"
 #include "func_prototypes.h"
@@ -47,7 +50,23 @@ void nui_quit();
  *	--------------------------------------------------------
  */
 
-
+/**
+ *	\brief		Creates a new window
+ *	\param		title		:	title of the window
+ *	\param		width		:	width of the window
+ *	\param		height		:	height of the window
+ *	\param		style 		:	style of the new window (see NUI_WINDOW_STYLE_* flags)
+ *	\return		a pointer to the allocated window
+ */
+nui_window_t*	nui_create_window(	const char* title,
+									unsigned int width,
+									unsigned int height,
+									NUI_WINDOW_STYLE style);
+/**
+ *	\brief		Destroy a previously allocated window
+ *	\param		windowPtr	:	pointer to the window to destroy
+ */
+void			nui_destroy_window(nui_window_t* windowPtr);
 
 /**
  *	--------------------------------------------------------

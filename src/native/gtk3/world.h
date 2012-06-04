@@ -6,6 +6,7 @@
 #define WORLD_H__
 
 /**
+ *	\struct 	nui_app
  *	Contains members related to the nui world and will be accessible
  *	globally (contains instance of the application and so on)
  */
