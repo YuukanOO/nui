@@ -1,5 +1,6 @@
 #include "nui.h"
 #include "native.h"
+#include "memory.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -22,13 +23,18 @@ void nui_init(NUI_INIT_ARGS_D)
 	nui_native_init(NUI_INIT_ARGS_V);
 }
 // -----------------------------------------------------------------
+void nui_cleanup()
+{
+	nui_alert("cleaning up!");
+}
+// -----------------------------------------------------------------
 int nui_run()
 {
 	// Launch the native main loop which process events
 	nui_native_main_loop();
 
 	// Cleanup some stuff ?? Does the program always reach this point?
-	nui_alert("Reach the end of the program");
+	nui_cleanup();
 
 	return 0;
 }

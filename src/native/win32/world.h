@@ -14,7 +14,7 @@
  */
 typedef struct nui_app
 {
-	HINSTANCE* instance;	/*!< pointer to the win32 app instance */
+	HINSTANCE instance;	/*!< pointer to the win32 app instance */
 } nui_app_t, nui_win32_app_t;
 
 #endif

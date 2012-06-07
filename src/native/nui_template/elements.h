@@ -11,7 +11,10 @@
  */
 typedef struct nui_window
 {
-	
+	/** 
+	 *	You should at least defines those members:
+	 *		- handle : pointer to the handle of the window
+	 */
 } nui_window_t, nui_<os>_window_t;
 
 #endif

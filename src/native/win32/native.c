@@ -68,7 +68,7 @@ void nui_native_init(HINSTANCE hInstance, int nCmdShow)
 	}
 
 	// Sets the nui world structure
-	nui_g_app.instance = &hInstance;
+	nui_g_app.instance = hInstance;
 }
 // -----------------------------------------------------------------
 void nui_native_main_loop()

@@ -31,6 +31,10 @@ extern nui_app_t nui_g_app;
  */
 void nui_init(NUI_INIT_ARGS_D);
 /**
+ *	\brief		Clean up all stuff allocated by the NUI library
+ */
+void nui_cleanup();
+/**
  *	\brief		Start the main loop
  */
 int nui_run();
@@ -63,7 +67,7 @@ nui_window_t*	nui_create_window(	const char* title,
 									unsigned int height,
 									NUI_WINDOW_STYLE style);
 /**
- *	\brief		Destroy a previously allocated window
+ *	\brief		Manually destroy a previously allocated window
  *	\param		windowPtr	:	pointer to the window to destroy
  */
 void			nui_destroy_window(nui_window_t* windowPtr);
