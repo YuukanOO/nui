@@ -2,6 +2,8 @@
  *	Contains memory related members used by the NUI lib
  */
 
+#include <stdlib.h>
+
 /**
  *	\brief		Alloc a block of memory
  *	\param		size 	:	size to allocate

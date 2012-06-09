@@ -45,22 +45,22 @@ LRESULT CALLBACK nui_win32_wndproc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 
 void nui_native_init(HINSTANCE hInstance, int nCmdShow)
 {
-	WNDCLASSEX window_class;
-	// Sets the window_class members
-	window_class.cbSize        = sizeof(WNDCLASSEX);
-	window_class.style         = 0;
-	window_class.lpfnWndProc   = nui_win32_wndproc;
-	window_class.cbClsExtra    = 0;
-	window_class.cbWndExtra    = 0;
-	window_class.hInstance     = hInstance;
-	window_class.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
-	window_class.hCursor       = LoadCursor(NULL, IDC_ARROW);
-	window_class.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
-	window_class.lpszMenuName  = NULL;
-	window_class.lpszClassName = nui_g_win32_class_name;
-	window_class.hIconSm       = LoadIcon(NULL, IDI_APPLICATION);
+	WNDCLASSEX windowClass;
+	// Sets the windowClass members
+	windowClass.cbSize        = sizeof(WNDCLASSEX);
+	windowClass.style         = 0;
+	windowClass.lpfnWndProc   = nui_win32_wndproc;
+	windowClass.cbClsExtra    = 0;
+	windowClass.cbWndExtra    = 0;
+	windowClass.hInstance     = hInstance;
+	windowClass.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
+	windowClass.hCursor       = LoadCursor(NULL, IDC_ARROW);
+	windowClass.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
+	windowClass.lpszMenuName  = NULL;
+	windowClass.lpszClassName = nui_g_win32_class_name;
+	windowClass.hIconSm       = LoadIcon(NULL, IDI_APPLICATION);
 
-	if(!RegisterClassEx(&window_class))
+	if(!RegisterClassEx(&windowClass))
 	{
 		// TODO: Should create a dialog with custom parameters
 		nui_alert("Can't register the WIN32 class!");
