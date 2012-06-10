@@ -3,6 +3,8 @@
  */
 
 #include <gtk/gtk.h>
+#include "elements.h"
+#include "../../flags.h"
 
 void nui_native_init(int argc, char* argv[])
 {
@@ -33,4 +35,18 @@ void nui_native_alert(const char* msg)
 void nui_native_quit()
 {
 	gtk_main_quit();
+}
+// -----------------------------------------------------------------
+void nui_native_create_window(	nui_window_t* windowPtr,
+								const char* title,
+								unsigned int width,
+								unsigned int height,
+								NUI_WINDOW_STYLE style)
+{
+
+}
+// -----------------------------------------------------------------
+void nui_native_destroy_window(nui_window_t* windowPtr)
+{
+	
 }

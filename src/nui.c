@@ -65,11 +65,17 @@ nui_window_t* nui_create_window(const char* title,
 								unsigned int height,
 								NUI_WINDOW_STYLE style)
 {
-	// TODO: I should allocates the struct here to avoid having nui_alloc in different places
-	return NULL;
+	// Allocates the window
+	nui_window_t* window = nui_alloc(sizeof(nui_window_t));
+
+	// TODO: Must keep track of all windows here
+	nui_native_create_window(window, title, width, height, style);
+
+	return window;
 }
 // -----------------------------------------------------------------
 void nui_destroy_window(nui_window_t* windowPtr)
 {
+	nui_native_destroy_window(windowPtr);
 	// TODO: And I should free the allocated window here, after the native stuff are done
 }
