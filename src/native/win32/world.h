@@ -6,6 +6,7 @@
 #define WORLD_H__
 
 #include <windows.h>
+#include "elements.h"
 
 /**
  *	\struct 	nui_app
@@ -14,7 +15,8 @@
  */
 typedef struct nui_app
 {
-	HINSTANCE instance;	/*!< pointer to the win32 app instance */
+	HINSTANCE instance;		/*!< pointer to the win32 app instance */
+	nui_window_t* window;	/*!< Main window of the application */
 } nui_app_t, nui_win32_app_t;
 
 #endif

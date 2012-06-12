@@ -20,18 +20,30 @@ nui_app_t nui_g_app;
 
 void nui_init(NUI_INIT_ARGS_D)
 {
+	// Init the global app structure
+	nui_g_app.window = NULL;
+
 	nui_native_init(NUI_INIT_ARGS_V);
 }
 // -----------------------------------------------------------------
 void nui_cleanup()
 {
-	nui_alert("cleaning up!");
+	if(nui_g_app.window != NULL)
+	{
+		nui_destroy_window(nui_g_app.window);
+	}
+
+	nui_alert("cleaning up! %p", nui_g_app.window);
 }
 // -----------------------------------------------------------------
 int nui_run()
 {
-	// Launch the native main loop which process events
-	nui_native_main_loop();
+	// If we do not have create a window yet, just exit
+	if(nui_g_app.window != NULL)
+	{
+		// Launch the native main loop which process events
+		nui_native_main_loop();
+	}
 
 	// Cleanup some stuff ?? Does the program always reach this point?
 	nui_cleanup();
@@ -68,14 +80,27 @@ nui_window_t* nui_create_window(const char* title,
 	// Allocates the window
 	nui_window_t* window = nui_alloc(sizeof(nui_window_t));
 
-	// TODO: Must keep track of all windows here
+	// If this is the first window, this is the app window
+	if(nui_g_app.window == NULL)
+	{
+		nui_g_app.window = window;
+	}
+
 	nui_native_create_window(window, title, width, height, style);
 
 	return window;
 }
 // -----------------------------------------------------------------
-void nui_destroy_window(nui_window_t* windowPtr)
+void nui_destroy_window(nui_window_t* window)
 {
-	nui_native_destroy_window(windowPtr);
-	// TODO: And I should free the allocated window here, after the native stuff are done
+	nui_native_destroy_window(window);
+	nui_free(window);
+
+	if(window == nui_g_app.window)
+	{
+		nui_g_app.window = NULL;
+		// Maybe I should call nui_quit?
+	}
+
+	window = NULL; // Doesn't work??!!
 }

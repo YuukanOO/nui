@@ -91,3 +91,17 @@ void nui_native_quit()
 {
 	PostQuitMessage(0);
 }
+// -----------------------------------------------------------------
+void nui_native_create_window(	nui_window_t* windowPtr,
+								const char* title,
+								unsigned int width,
+								unsigned int height,
+								NUI_WINDOW_STYLE style)
+{
+
+}
+// -----------------------------------------------------------------
+void nui_native_destroy_window(nui_window_t* windowPtr)
+{
+	
+}

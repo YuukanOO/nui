@@ -68,9 +68,9 @@ nui_window_t*	nui_create_window(	const char* title,
 									NUI_WINDOW_STYLE style);
 /**
  *	\brief		Manually destroy a previously allocated window
- *	\param		windowPtr	:	pointer to the window to destroy
+ *	\param		window_ptr	:	pointer to the window to destroy
  */
-void			nui_destroy_window(nui_window_t* windowPtr);
+void			nui_destroy_window(nui_window_t* window_ptr);
 
 /**
  *	--------------------------------------------------------
