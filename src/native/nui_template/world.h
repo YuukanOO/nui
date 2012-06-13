@@ -18,7 +18,7 @@ typedef struct nui_app
 	 *	You should at least defines those members:
 	 *		- instance : pointer to the instance of this application
 	 */
-	 nui_window_t* window;	/*!< Main window of the application */
+	 nui_window_t* 	window;	/*!< Main window of the application */
 } nui_app_t, nui_<os>_app_t;
 
 #endif

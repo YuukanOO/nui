@@ -37,7 +37,7 @@ void nui_native_quit()
 	gtk_main_quit();
 }
 // -----------------------------------------------------------------
-void nui_native_create_window(	nui_window_t* windowPtr,
+void nui_native_create_window(	nui_window_t* window,
 								const char* title,
 								unsigned int width,
 								unsigned int height,
@@ -46,7 +46,7 @@ void nui_native_create_window(	nui_window_t* windowPtr,
 
 }
 // -----------------------------------------------------------------
-void nui_native_destroy_window(nui_window_t* windowPtr)
+void nui_native_destroy_window(nui_window_t* window)
 {
 	
 }

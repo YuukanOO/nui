@@ -14,7 +14,7 @@
  */
 typedef struct nui_app
 {
-	nui_window_t* window;	/*!< Main window of the application */
+	nui_window_t* 	window;	/*!< Main window of the application */
 } nui_app_t, nui_gtk3_app_t;
 
 #endif

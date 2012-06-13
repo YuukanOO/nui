@@ -15,8 +15,9 @@
  */
 typedef struct nui_app
 {
-	HINSTANCE instance;		/*!< pointer to the win32 app instance */
-	nui_window_t* window;	/*!< Main window of the application */
+	HINSTANCE 		instance;	/*!< Pointer to the win32 app instance */
+	int 			nCmdShow;	/*!< Specific for win32 */
+	nui_window_t* 	window;		/*!< Main window of the application */
 } nui_app_t, nui_win32_app_t;
 
 #endif

@@ -39,23 +39,23 @@ void nui_native_quit();
 
 /**
  *	\brief		Creates a new window using the native API
- *	\param		windowPtr	:	pointer to an allocated nui_window_t struct
+ *	\param		window		:	pointer to an allocated nui_window_t struct
  *	\param		title		:	title of the window
  *	\param		width		:	width of the window
  *	\param		height		:	height of the window
  *	\param		style 		:	style of the new window (see NUI_WINDOW_STYLE enum)
  *	\return		a pointer to the allocated window
  */
-void nui_native_create_window(	nui_window_t* windowPtr,
+void nui_native_create_window(	nui_window_t* window,
 								const char* title,
 								unsigned int width,
 								unsigned int height,
 								NUI_WINDOW_STYLE style);
 /**
  *	\brief		Destroy a previously allocated window
- *	\param		windowPtr	:	pointer to the window to destroy
+ *	\param		window	:	pointer to the window to destroy
  */
-void nui_native_destroy_window(nui_window_t* windowPtr);
+void nui_native_destroy_window(nui_window_t* window);
 
 /**
  *	--------------------------------------------------------

@@ -13,7 +13,7 @@
  */
 typedef struct nui_window
 {
-	HWND handle;	/*< Handle to the window */
+	HWND 	handle;	/*< Handle to the window */
 } nui_window_t, nui_win32_window_t;
 
 #endif
