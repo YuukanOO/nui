@@ -29,7 +29,7 @@ void nui_init(NUI_INIT_ARGS_D)
 
 	nui_native_init(NUI_INIT_ARGS_V);
 
-	LOG("[NUI_CORE] Initialized!\n")
+	LOG_WITH_TIME("[NUI_CORE] Initialized!\n")
 }
 // -----------------------------------------------------------------
 void nui_cleanup()
@@ -39,7 +39,7 @@ void nui_cleanup()
 		nui_destroy_window(nui_g_app.window);
 	}
 
-	LOG("[NUI_CORE] Cleaned!\n")
+	LOG_WITH_TIME("[NUI_CORE] Cleaned!\n")
 	LOG_CLEAN()
 }
 // -----------------------------------------------------------------
@@ -48,7 +48,7 @@ int nui_run()
 	// If we do not have create a window yet, just exit
 	if(nui_g_app.window != NULL)
 	{
-		LOG("[NUI_CORE] Launching main loop...\n")
+		LOG_WITH_TIME("[NUI_CORE] Launching main loop...\n")
 		// Launch the native main loop which process events
 		nui_native_main_loop();
 	}
@@ -72,7 +72,7 @@ void nui_alert(const char* format, ...)
 void nui_quit()
 {
 	nui_native_quit();
-	LOG("[NUI_CORE] Exit requested.\n")
+	LOG_WITH_TIME("[NUI_CORE] Exit requested.\n")
 }
 
 /**
@@ -97,9 +97,9 @@ nui_window_t* nui_create_window(const char* title,
 
 	nui_native_create_window(window, title, width, height, style);
 
-	LOG("[NUI_WIDGET] Window created:\n \
-\t\taddr: %p\n \
-\t\ttitle: \"%s\"\n", window, title)
+	LOG_WITH_TIME("[NUI_WIDGET] Window created:\n \
+\t\t\taddr: %p\n \
+\t\t\ttitle: \"%s\"\n", window, title)
 
 	return window;
 }
@@ -115,7 +115,7 @@ void nui_destroy_window(nui_window_t* window)
 		// Maybe I should call nui_quit?
 	}
 
-	LOG("[NUI_WIDGET] Window destroyed: %p\n", window)
+	LOG_WITH_TIME("[NUI_WIDGET] Window destroyed: %p\n", window)
 
 	window = NULL; // Doesn't work??!!
 }

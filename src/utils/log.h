@@ -28,10 +28,11 @@ typedef struct logger
  *	--------------------------------------------------------
  */
 
-#define LOG_DECLARE()		logger_t g_log;
-#define LOG_INIT(log_name)	g_log.file = fopen(log_name, "w");
-#define LOG_CLEAN()			fclose(g_log.file);
-#define LOG(format, ...)	log_msg(&g_log, format, __VA_ARGS__);
+#define LOG_DECLARE()				logger_t g_log;
+#define LOG_INIT(log_name)			g_log.file = fopen(log_name, "w");
+#define LOG_CLEAN()					fclose(g_log.file);
+#define LOG(format, ...)			log_msg(&g_log, format, __VA_ARGS__);
+#define LOG_WITH_TIME(format, ...)	log_msg_with_time(&g_log, format, __VA_ARGS__);
 
 /**
  *	--------------------------------------------------------
@@ -41,9 +42,22 @@ typedef struct logger
 
 /**
  *	\brief		Log a message to a file handled by the log
- *	\param		log 	:	logger struct which contain output handle
- *	\param		format 	:	format of the string to write
+ *	\param		log 			:	logger struct which contain output handle
+ *	\param		format 			:	format of the string to write
  */
 void log_msg(logger_t* log, const char* format, ...);
+/**
+ *	\brief		Log a message
+ *	\param		log 			:	logger struct which contain output handle
+ *	\param		format 			:	format of the string to write
+ *	\param		args 			:	va_list of arguments
+ */
+void vlog_msg(logger_t* log, const char* format, va_list args);
+/**
+ *	\brief		Log a message and include the time in the msg
+ *	\param		log 			:	logger struct which contain output handle
+ *	\param		format 			:	format of the string to write
+ */
+void log_msg_with_time(logger_t* log, const char* format, ...);
 
 #endif
